@@ -1,0 +1,52 @@
+.img {
+	height: auto;
+	width: 100%;
+	background: red;
+	text-align: center;
+}
+#text{
+	margin-top: 20px;
+	text-align: center;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.dept{	
+	margin-left: 260px;
+	margin-top: 20px; 
+}
+.dept ul{
+	list-style: none;
+	
+}
+.dept ul li{
+	background-color: #eda012;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	float: left;
+	font-size: 25px;
+	border: 1px solid white;
+	color: white;
+	position: relative;
+}
+.dept ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.dept ul li:hover{
+	background-color: #000000;
+}
+.dept ul ul{
+	display: none;
+}
+.dept ul li:hover > ul{
+	display: block;
+}
+.dept ul ul ul{
+	margin-left: 200px;
+	top: 0px;
+	position: absolute;
+}
