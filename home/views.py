@@ -7,4 +7,4 @@ def home(request):
 def student_info(request):
     all_student = Student.objects.all()
     context = {'all_student': all_student}
-    return render(request, 'home/student_table.html', context)
+    return render(request, 'student_table.html', context)
