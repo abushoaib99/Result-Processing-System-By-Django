@@ -19,5 +19,6 @@ from home.views import home, student_info
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', include(home.urls, namespace='home', app_name='home'))
+    url(r'', home, name='home')
+
 ]
