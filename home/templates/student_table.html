@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student Info</title>
+</head>
+<body>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+    <table>
+    <li><a href="{% url 'result:log' %}">Logout</a></li>
+
+        {% if all_student|length %}
+
+        <tr>
+            <th>Student Name</th>
+            <th>Subject Mark</th>
+            <th>Assignment Mark</th>
+            <th>Midterm Mark</th>
+            <th>Class Test Mark</th>
+            <th>Total Marks</th>
+            <th>GPA</th>
+        </tr>
+         {% for i,j,student in all_student %}
+         <tr>
+            <td>{{student.subject_name}}</td>
+            <td>{{student.subject_marks}}</td>
+            <td>{{student.assignment_marks}}</td>
+            <td>{{student.midterm_marks}}</td>
+            <td>{{student.class_test_marks}}</td>
+            <td>{{ i }}</td>
+            <td>{{ j }}</td>
+        </tr>
+
+
+        {% endfor %}
+            <tr>
+            <th>Total GPA = {{gpa }}</th>
+        </tr>
+        {% else %}
+        <p>This semester result are not published</p>
+
+    {% endif %}
+    </table>
+
+</body>
+</html>

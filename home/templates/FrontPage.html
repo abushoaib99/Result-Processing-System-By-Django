@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Result Processing System</title>
+	<meta charset="utf-8">
+	<!-- Loads the path to static file -->
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'home/FrontPage.css' %}" />
+</head>
+<body>
+
+	<div id="text">
+        <h1>RESULT PROCESSING SYSTEM</h1>
+	</div>
+
+    <li><a href="{% url 'result:log' %}">Logout</a></li>
+
+    <div class="col-sm-4"><br>
+        <div id="select">
+            <p>{{ dept}}</p>
+            <p>{{ roll }}</p>
+            <form action="" method="post">
+                {% csrf_token %}
+                <select class="form-control" id="" name="semester">
+                    <option disabled>Select Semester</option>
+                    {% for s in semester%}
+                        <option value="{{ s.id }}">{{ s.student_semester }}</option>
+                    {% endfor %}
+                </select>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
